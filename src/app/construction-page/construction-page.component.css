@@ -1,6 +1,14 @@
+.constructionGrid {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #373745;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 table {
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 tr.example-detail-row {
