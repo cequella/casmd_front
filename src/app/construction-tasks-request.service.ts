@@ -5,10 +5,8 @@ import { Observable, of } from 'rxjs';
 
 // --------------------------------------------------------------------------------
 export interface Task {
-    position:    number;
-    name:        string;
-    weight:      number;
-    symbol:      string;
+    label:       string;
+    done:        boolean;
     description: string;
 }
 // --------------------------------------------------------------------------------
@@ -22,6 +20,6 @@ export class ConstructionTasksRequestService {
 
     getTaskList(): Observable<Task[]> {
 	let path ="./assets/constructionTasks.json";
-	return this.http.get<Task[]>(path);;
+	return this.http.get<Task[]>(path);
     }
 }
