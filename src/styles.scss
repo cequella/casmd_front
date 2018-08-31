@@ -4,3 +4,7 @@
 body {
     margin: 0px;
 }
+
+.accent-color {
+    color: mat-color($accent) !important;
+}
