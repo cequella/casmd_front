@@ -1,21 +1,43 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
+import {
+    MdcIconModule,
+    MdcAppBarModule,
+    MdcDrawerModule,
+    MdcListModule,
+    MdcTypographyModule,
+} from '@angular-mdc/web';
+
 @NgModule({
     imports: [
-	CommonModule,
+	// Angular Material
 	MatCardModule,
 	MatListModule,
-	MatIconModule
+	MatIconModule,
+
+	// MDC
+	MdcIconModule,
+	MdcAppBarModule,
+	MdcDrawerModule,
+	MdcListModule,
+	MdcTypographyModule,
     ],
     exports: [
+	// Angular Material
 	MatCardModule,
 	MatListModule,
-	MatIconModule
+	MatIconModule,
+
+	// MDC
+	MdcIconModule,
+	MdcAppBarModule,
+	MdcDrawerModule,
+	MdcListModule,
+	MdcTypographyModule,
     ],
     declarations: []
 })
