@@ -8,7 +8,7 @@
   <mat-card style="width: 40%; margin: 0 auto; height: 30vh; overflow-y: auto;">
     <mat-list>
       <mat-list-item *ngFor="let task of taskList">
-	<mat-icon matListIcon *ngIf="task.done; else taskUndone" color="accent">check_box</mat-icon>
+	<mat-icon matListIcon *ngIf="task.state==2; else taskUndone" color="accent">check_box</mat-icon>
 	<ng-template #taskUndone>
 	  <mat-icon matListIcon>check_box_outline_blank</mat-icon>
 	</ng-template>

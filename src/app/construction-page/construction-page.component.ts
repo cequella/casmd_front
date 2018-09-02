@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Task, ConstructionTasksRequestService } from '../construction-tasks-request.service';
+import { Task, ConstructionTasksRequestService } from './construction-tasks-request.service';
 
 @Component({
     selector: 'app-construction-page',

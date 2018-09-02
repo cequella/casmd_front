@@ -19,7 +19,7 @@ export class ConstructionTasksRequestService {
     constructor(private http: HttpClient) { }
 
     getTaskList(): Observable<Task[]> {
-	let path ="./assets/constructionTasks.json";
+	let path ="http://localhost:8000/api/taskList/?format=json";
 	return this.http.get<Task[]>(path);
     }
 }
