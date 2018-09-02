@@ -10,6 +10,10 @@ import {
     MdcDrawerModule,
     MdcListModule,
     MdcTypographyModule,
+    MdcCardModule,
+    MdcButtonModule,
+    MdcIconButtonModule,
+    MdcElevationModule,
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -25,6 +29,10 @@ import {
 	MdcDrawerModule,
 	MdcListModule,
 	MdcTypographyModule,
+	MdcCardModule,
+	MdcButtonModule,
+	MdcIconButtonModule,
+	MdcElevationModule,
     ],
     exports: [
 	// Angular Material
@@ -38,6 +46,10 @@ import {
 	MdcDrawerModule,
 	MdcListModule,
 	MdcTypographyModule,
+	MdcCardModule,
+	MdcButtonModule,
+	MdcIconButtonModule,
+	MdcElevationModule,
     ],
     declarations: []
 })

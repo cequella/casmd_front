@@ -9,12 +9,14 @@ import { ConstructionPageComponent } from './construction-page/construction-page
 import { MaterialModulesModule } from './material-modules/material-modules.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HomeHeaderComponent } from './home-header/home-header.component';
 
 @NgModule({
     declarations: [
 	AppComponent,
 	ConstructionPageComponent,
-	HomePageComponent
+	HomePageComponent,
+	HomeHeaderComponent
     ],
     imports: [
 	BrowserModule,

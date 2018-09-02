@@ -1,0 +1,24 @@
+/* Mobile screens */
+header {
+    width: 90vw;
+    margin: 8px auto;
+}
+
+main {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/* For big screens */
+@media only screen and (min-width: 768px) {
+    header {
+	width: 80vw;
+	height: 45vw; /* 16:9 based on width */
+	margin: 16px auto;
+    }
+
+    main {
+	width: 90vw;
+	margin: 0 auto;
+    }
+}
