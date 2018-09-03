@@ -10,13 +10,17 @@ import { MaterialModulesModule } from './material-modules/material-modules.modul
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeHeaderComponent } from './home-header/home-header.component';
+import { TimeLineComponent } from './time-line/time-line.component';
+import { NewHeadlineComponent } from './new-headline/new-headline.component';
 
 @NgModule({
     declarations: [
 	AppComponent,
 	ConstructionPageComponent,
 	HomePageComponent,
-	HomeHeaderComponent
+	HomeHeaderComponent,
+	TimeLineComponent,
+	NewHeadlineComponent
     ],
     imports: [
 	BrowserModule,

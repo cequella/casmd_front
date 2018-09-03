@@ -14,6 +14,9 @@ import {
     MdcButtonModule,
     MdcIconButtonModule,
     MdcElevationModule,
+    MdcTabBarModule,
+    MdcFabModule,
+    MdcRippleModule
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -33,6 +36,9 @@ import {
 	MdcButtonModule,
 	MdcIconButtonModule,
 	MdcElevationModule,
+	MdcTabBarModule,
+	MdcFabModule,
+	MdcRippleModule
     ],
     exports: [
 	// Angular Material
@@ -50,6 +56,9 @@ import {
 	MdcButtonModule,
 	MdcIconButtonModule,
 	MdcElevationModule,
+	MdcTabBarModule,
+	MdcFabModule,
+	MdcRippleModule
     ],
     declarations: []
 })
