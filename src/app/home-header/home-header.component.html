@@ -3,9 +3,9 @@
     <mdc-card-media>
       <mdc-card-media-content>
 	<div>
-	  <h2 mdcHeadline6>{{title}}</h2>
-	  <h3 mdcSubtitle2>{{subtitle}}</h3>
-	  <p mdcBody2>{{description}}</p>
+	  <h2 mdcHeadline6>{{content.title}}</h2>
+	  <h3 mdcSubtitle2>Começa dia {{content.startDate | date:"dd/MM/yyyy"}}</h3>
+	  <p mdcBody2>{{content.description}}</p>
 	</div>
       </mdc-card-media-content>
     </mdc-card-media>

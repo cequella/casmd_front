@@ -1,4 +1,8 @@
-<p class="hashtag" mdcOverline>#{{content.hashtag}}</p>
-<h6 class="title" mdcHeadline6>{{content.title}}</h6>
-<p class="subtitle" mdcBody2>{{content.subtitle}}</p>
+<mdc-ripple secondary="True" [attachTo]="headlineDiv">
+  <div #headlineDiv>
+    <p class="hashtag" mdcOverline>#{{content.hashtag}}</p>
+    <h6 class="title" mdcHeadline6>{{content.headline}}</h6>
+    <p class="subtitle" mdcBody2>{{content.promo}}</p>
+  </div>
+</mdc-ripple>
 
