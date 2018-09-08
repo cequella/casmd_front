@@ -7,19 +7,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConstructionPageComponent } from './construction-page/construction-page.component';
 import { MaterialModulesModule } from './material-modules/material-modules.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeHeaderComponent } from './home-header/home-header.component';
+import { TimeLineComponent } from './time-line/time-line.component';
+import { NewHeadlineComponent } from './new-headline/new-headline.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ConstructionPageComponent
-  ],
-  imports: [
-      BrowserModule,
-      BrowserAnimationsModule,
-      MaterialModulesModule,
-      HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+	AppComponent,
+	ConstructionPageComponent,
+	HomePageComponent,
+	HomeHeaderComponent,
+	TimeLineComponent,
+	NewHeadlineComponent
+    ],
+    imports: [
+	BrowserModule,
+	BrowserAnimationsModule,
+	MaterialModulesModule,
+	HttpClientModule,
+	AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

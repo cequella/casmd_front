@@ -5,10 +5,8 @@ import { Observable, of } from 'rxjs';
 
 // --------------------------------------------------------------------------------
 export interface Task {
-    position:    number;
-    name:        string;
-    weight:      number;
-    symbol:      string;
+    label:       string;
+    done:        boolean;
     description: string;
 }
 // --------------------------------------------------------------------------------
@@ -21,7 +19,7 @@ export class ConstructionTasksRequestService {
     constructor(private http: HttpClient) { }
 
     getTaskList(): Observable<Task[]> {
-	let path ="./assets/constructionTasks.json";
-	return this.http.get<Task[]>(path);;
+	let path ="http://localhost:8000/api/taskList/?format=json";
+	return this.http.get<Task[]>(path);
     }
 }

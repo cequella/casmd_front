@@ -1,18 +1,64 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+
+import {
+    MdcIconModule,
+    MdcAppBarModule,
+    MdcDrawerModule,
+    MdcListModule,
+    MdcTypographyModule,
+    MdcCardModule,
+    MdcButtonModule,
+    MdcIconButtonModule,
+    MdcElevationModule,
+    MdcTabBarModule,
+    MdcFabModule,
+    MdcRippleModule
+} from '@angular-mdc/web';
 
 @NgModule({
     imports: [
-	CommonModule,
+	// Angular Material
 	MatCardModule,
-	MatTableModule
+	MatListModule,
+	MatIconModule,
+
+	// MDC
+	MdcIconModule,
+	MdcAppBarModule,
+	MdcDrawerModule,
+	MdcListModule,
+	MdcTypographyModule,
+	MdcCardModule,
+	MdcButtonModule,
+	MdcIconButtonModule,
+	MdcElevationModule,
+	MdcTabBarModule,
+	MdcFabModule,
+	MdcRippleModule
     ],
     exports: [
+	// Angular Material
 	MatCardModule,
-	MatTableModule
+	MatListModule,
+	MatIconModule,
+
+	// MDC
+	MdcIconModule,
+	MdcAppBarModule,
+	MdcDrawerModule,
+	MdcListModule,
+	MdcTypographyModule,
+	MdcCardModule,
+	MdcButtonModule,
+	MdcIconButtonModule,
+	MdcElevationModule,
+	MdcTabBarModule,
+	MdcFabModule,
+	MdcRippleModule
     ],
     declarations: []
 })

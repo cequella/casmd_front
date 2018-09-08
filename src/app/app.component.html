@@ -1,1 +1,55 @@
-<app-construction-page></app-construction-page>
+<!-- AppBar -->
+<mdc-app-bar #appbar [short]="true" [fixedAdjustElement]="mainContent" >
+  <mdc-app-bar-row>
+    <mdc-app-bar-section align="start" title="CASMD">
+      <mdc-icon mdcAppBarNavIcon (click)="drawer.open()">menu</mdc-icon>
+    </mdc-app-bar-section>
+    <mdc-app-bar-section align="end" *ngIf="appbar.isCollapsed()">
+      <mdc-icon mdcAppBarActionItem>whatshot</mdc-icon>
+    </mdc-app-bar-section>
+  </mdc-app-bar-row>
+</mdc-app-bar>
+<!-- /AppBar -->
+
+<!-- Content -->
+<div #mainContent>
+  <router-outlet></router-outlet> <!-- Content goes here -->
+</div>
+<!-- /Content -->
+
+<!-- Drawer -->
+<mdc-drawer #drawer drawer='temporary' class="demo-drawer--custom">
+  <mdc-drawer-header>
+    <mdc-drawer-header-content>
+      Header goes here
+    </mdc-drawer-header-content>
+  </mdc-drawer-header>
+  <mdc-drawer-content>
+    <mdc-list-group>
+
+      <!-- Drawer options -->
+      <mdc-list>
+	<ng-container *ngFor="let item of menu">
+	  <a mdc-list-item>
+	    <mdc-icon mdcListItemGraphic>{{item.icon}}</mdc-icon>{{item.label}}
+	  </a>
+	</ng-container>
+
+	<mdc-list-divider></mdc-list-divider> <!-- Separator to static content -->
+	
+	<a mdc-list-item>
+	  <mdc-icon mdcListItemGraphic>school</mdc-icon>Sobre o Curso
+	</a>
+	<a mdc-list-item>
+	  <mdc-icon mdcListItemGraphic>info</mdc-icon>Sobre o CA
+	</a>
+	<a mdc-list-item>
+	  <mdc-icon mdcListItemGraphic>group</mdc-icon>Sobre a Gestão
+	</a>
+      </mdc-list>
+      <!-- /Drawer options -->
+      
+    </mdc-list-group>
+  </mdc-drawer-content>
+</mdc-drawer>
+<!-- /Drawer -->

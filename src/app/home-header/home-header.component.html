@@ -1,0 +1,16 @@
+<mdc-card mdcElevation="6">
+  <mdc-card-primary-action mdc-ripple>
+    <mdc-card-media>
+      <mdc-card-media-content>
+	<div>
+	  <h2 mdcHeadline6>{{content.title}}</h2>
+	  <h3 mdcSubtitle2>Começa dia {{content.startDate | date:"dd/MM/yyyy"}}</h3>
+	  <p mdcBody2>{{content.description}}</p>
+	</div>
+      </mdc-card-media-content>
+    </mdc-card-media>
+  </mdc-card-primary-action>
+  <mdc-card-actions [icons]="true">
+    <button mdc-button outlined="True">Ver Todos</button>
+  </mdc-card-actions>
+</mdc-card>
