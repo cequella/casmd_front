@@ -1,16 +1,16 @@
-<mdc-tab-bar (activated)="logTab($event)">
+<mdc-tab-bar (activated)="changeContent($event)">
   <mdc-tab-scroller>
     <mdc-tab *ngFor="let tab of tabList" [label]="tab"></mdc-tab>
   </mdc-tab-scroller>
 </mdc-tab-bar>
 
-<ng-container *ngFor="let item of newsList">
+<ng-container *ngFor="let item of currentList">
   <app-new-headline [content]="item"></app-new-headline>
   <mdc-list-divider></mdc-list-divider>
 </ng-container>
 
 <div class="lastRow">
   <button mdc-fab extended="True" label="Ver mais">
-    <mdc-icon>expand_more</mdc-icon>
+    <mdc-icon>add</mdc-icon>
   </button>
 </div>
