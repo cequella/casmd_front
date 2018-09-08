@@ -12,6 +12,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { NewHeadlineComponent } from './new-headline/new-headline.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,8 @@ import { NewHeadlineComponent } from './new-headline/new-headline.component';
 	BrowserAnimationsModule,
 	MaterialModulesModule,
 	HttpClientModule,
-	AppRoutingModule
+	AppRoutingModule,
+	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],
     bootstrap: [AppComponent]
