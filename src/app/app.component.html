@@ -5,7 +5,6 @@
       <mdc-icon mdcAppBarNavIcon (click)="drawer.open()">menu</mdc-icon>
     </mdc-app-bar-section>
     <mdc-app-bar-section align="end" *ngIf="appbar.isCollapsed()">
-      <!--<mdc-icon mdcAppBarActionItem>whatshot</mdc-icon>-->
       <img src="./assets/LogoCA.svg" mdcAppBarActionItem>
     </mdc-app-bar-section>
   </mdc-app-bar-row>
@@ -31,7 +30,7 @@
       <!-- Drawer options -->
       <mdc-list>
 	<ng-container *ngFor="let item of menu">
-	  <a mdc-list-item>
+	  <a mdc-list-item [routerLink]="item.href">
 	    <mdc-icon mdcListItemGraphic>{{item.icon}}</mdc-icon>{{item.label}}
 	  </a>
 	</ng-container>

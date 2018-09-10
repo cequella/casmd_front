@@ -10,14 +10,14 @@ export class AppComponent {
 	{icon: "home",
 	 label: "Home",
 	 href: ""},
-	{icon: "whatshot",
+	/*{icon: "whatshot",
 	 label: "Novidades",
 	 href: ""},
 	{icon: "description",
 	 label: "Documentos",
-	 href: ""},
+	 href: ""},*/
 	{icon: "view_quilt",
 	 label: "Matriz Curricular",
-	 href: ""},
+	 href: "grade"},
     ];
 }
