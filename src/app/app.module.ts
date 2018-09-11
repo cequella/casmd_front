@@ -15,6 +15,7 @@ import { NewHeadlineComponent } from './new-headline/new-headline.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CurriculumPageComponent } from './curriculum-page/curriculum-page.component';
+import { WebService } from './web.service';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,7 @@ import { CurriculumPageComponent } from './curriculum-page/curriculum-page.compo
 	AppRoutingModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
-    providers: [],
+    providers: [WebService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
