@@ -1,3 +1,21 @@
-<p>
-  curriculum-page works!
-</p>
+<div class="demo-content">
+  <mdc-list-group>
+    <!--<h3 mdcListGroupSubheader>Primeiro Semestre</h3>-->
+    <mdc-list *ngIf="curriculum">
+      <ng-container *ngFor="let course of curriculum.program">
+
+	<mdc-list-item>
+	  <div>
+	    <span class="courseCode">{{course.cod}} -&nbsp;</span>
+	    <span>{{course.name}}&nbsp;</span>
+	    <span>({{course.duration}}hrs)</span>
+	  </div>
+	  <div>
+	    Olá, imundo!
+	  </div>
+	</mdc-list-item>
+	
+      </ng-container>
+    </mdc-list>
+    <!--<mdc-list-divider #divider></mdc-list-divider>-->
+  </mdc-list-group>
