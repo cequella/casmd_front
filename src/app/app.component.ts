@@ -10,12 +10,6 @@ export class AppComponent {
 	{icon: "home",
 	 label: "Home",
 	 href: ""},
-	/*{icon: "whatshot",
-	 label: "Novidades",
-	 href: ""},
-	{icon: "description",
-	 label: "Documentos",
-	 href: ""},*/
 	{icon: "view_quilt",
 	 label: "Matriz Curricular",
 	 href: "grade"},
