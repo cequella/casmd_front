@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { ConstructionPageComponent } from './construction-page/construction-page.component';
 import { MaterialModulesModule } from './material-modules/material-modules.module';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { RoutingModule } from './routing.module';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { NewHeadlineComponent } from './new-headline/new-headline.component';
@@ -32,7 +32,7 @@ import { WebService } from './web.service';
 	BrowserAnimationsModule,
 	MaterialModulesModule,
 	HttpClientModule,
-	AppRoutingModule,
+	RoutingModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [WebService],
