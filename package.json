@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --port 80 --disable-host-check",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -17,6 +17,7 @@
     "@angular/common": "^6.1.9",
     "@angular/compiler": "^6.1.9",
     "@angular/core": "^6.1.9",
+    "@angular/flex-layout": "^6.0.0-beta.18",
     "@angular/forms": "^6.1.9",
     "@angular/http": "^6.1.9",
     "@angular/material": "^6.4.7",
@@ -26,8 +27,9 @@
     "@angular/router": "^6.1.9",
     "@angular/service-worker": "^6.1.9",
     "core-js": "^2.5.4",
+    "g": "^2.0.1",
     "rxjs": "^6.3.3",
-    "typescript": "^3.1.1",
+    "typescript": "^2.9.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
