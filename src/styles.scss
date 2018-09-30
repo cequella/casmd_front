@@ -5,6 +5,10 @@ body {
     margin: 0px;
 }
 
+mdc-drawer {
+    top: 0;
+}
+
 .accent-color {
     color: mat-color($accent) !important;
 }
