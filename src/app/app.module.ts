@@ -17,6 +17,8 @@ import { NewHeadlineComponent } from './new-headline/new-headline.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DocumentationPageComponent } from './documentation-page/documentation-page.component';
+import { StudentCardSearchComponent } from './student-card-search/student-card-search.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +28,9 @@ import { DocumentationPageComponent } from './documentation-page/documentation-p
 	HomeHeaderComponent,
 	TimeLineComponent,
 	NewHeadlineComponent,
-	DocumentationPageComponent
+	DocumentationPageComponent,
+	StudentCardSearchComponent,
+	LoadingComponent
     ],
     imports: [
 	BrowserModule,
