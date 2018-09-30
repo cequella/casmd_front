@@ -2,7 +2,7 @@
     "name": "CASMD",
     "short_name": "CASMD",
     "theme_color": "#363640",
-    "background_color": "#fafafa",
+    "background_color": "#363640",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",

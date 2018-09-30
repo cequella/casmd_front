@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import {
     MdcIconModule,
-    MdcAppBarModule,
+    MdcTopAppBarModule,
     MdcDrawerModule,
     MdcListModule,
     MdcTypographyModule,
@@ -28,7 +28,7 @@ import {
 
 	// MDC
 	MdcIconModule,
-	MdcAppBarModule,
+	MdcTopAppBarModule,
 	MdcDrawerModule,
 	MdcListModule,
 	MdcTypographyModule,
@@ -48,7 +48,7 @@ import {
 
 	// MDC
 	MdcIconModule,
-	MdcAppBarModule,
+	MdcTopAppBarModule,
 	MdcDrawerModule,
 	MdcListModule,
 	MdcTypographyModule,

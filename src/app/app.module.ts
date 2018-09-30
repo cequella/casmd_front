@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { ConstructionPageComponent } from './construction-page/construction-page.component';
 import { MaterialModulesModule } from './material-modules/material-modules.module';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -30,6 +31,7 @@ import { environment } from '../environments/environment';
 	MaterialModulesModule,
 	HttpClientModule,
 	AppRoutingModule,
+	FlexLayoutModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],
