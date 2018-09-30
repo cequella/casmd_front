@@ -1,6 +1,7 @@
 import { BrowserModule }    from '@angular/platform-browser';
 import { NgModule }         from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }      from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -15,6 +16,7 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { NewHeadlineComponent } from './new-headline/new-headline.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { DocumentationPageComponent } from './documentation-page/documentation-page.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,8 @@ import { environment } from '../environments/environment';
 	HomePageComponent,
 	HomeHeaderComponent,
 	TimeLineComponent,
-	NewHeadlineComponent
+	NewHeadlineComponent,
+	DocumentationPageComponent
     ],
     imports: [
 	BrowserModule,
@@ -32,6 +35,7 @@ import { environment } from '../environments/environment';
 	HttpClientModule,
 	AppRoutingModule,
 	FlexLayoutModule,
+	FormsModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],

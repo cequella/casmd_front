@@ -16,11 +16,13 @@
   </mdc-drawer-header>
   <mdc-drawer-content>
     <mdc-list useActivatedClass>
-      <mdc-list-item *ngFor="let item of menu">
+      <mdc-list-item *ngFor="let item of menu" [routerLink]="item.href" (click)="drawer.close()">
 	<mdc-icon mdcListItemGraphic *ngIf="item.icon">{{item.icon}}</mdc-icon>{{item.label}}
       </mdc-list-item>
     </mdc-list>
   </mdc-drawer-content>
 </mdc-drawer>
 
-<router-outlet></router-outlet>
+<div #mainContent>
+  <router-outlet></router-outlet>
+</div>
