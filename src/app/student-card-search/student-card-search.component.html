@@ -20,9 +20,9 @@
 
   <div *ngIf="state==3">
     <h1 mdcHeadline6>{{register}}:
-      <span [style.color]="scResult.state?'green':'red'">{{scResult.state?"Disponível":"Indisponível"}}</span>
+      <span [style.color]="scResult.deliveredAt?'red':'green'">{{scResult.deliveredAt?"Indisponível":"Disponível"}}</span>
     </h1>
-    <div *ngIf="scResult.state; else noResult">
+    <div *ngIf="!scResult.deliveredAt; else noResult">
       <h1 mdcBody1>A sua carteirinha já está no CA. Deseja agendar horário para resgatá-la?</h1>
       <div style="text-align: center;">
 	<mdc-text-field #dateField

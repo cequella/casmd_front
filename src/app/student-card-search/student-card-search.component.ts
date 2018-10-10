@@ -6,6 +6,8 @@ import { MdcSnackbar } from '@angular-mdc/web';
 import { LoadingComponent }         from '../loading/loading.component';
 import { StudentCardSearchService } from '../webapi/student-card-search.service';
 
+import { Card } from '../models/Card';
+
 @Component({
     selector: 'app-student-card-search',
     templateUrl: './student-card-search.component.html',
@@ -17,7 +19,7 @@ export class StudentCardSearchComponent implements OnInit {
     register: string;
 
     constructor(private snackbar: MdcSnackbar,
-		private searchSC: StudentCardSearchService) { }
+		private card:     StudentCardSearchService) { }
 
     ngOnInit() {
     }
@@ -25,7 +27,10 @@ export class StudentCardSearchComponent implements OnInit {
     findCard(form: NgForm, event: any) {
 	this.gotoLoading();
 	this.gotoResult();
-	this.searchSC.bla().subscribe(result => this.scResult =result);
+
+	this.card
+	    .searchFor(this.register)
+	    .subscribe(result => this.scResult =result);
     }
     cancel() {
 	this.gotoSearch();
