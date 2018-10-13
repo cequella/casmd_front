@@ -11,7 +11,6 @@ import { ConstructionPageComponent } from './construction-page/construction-page
 import { MaterialModulesModule } from './material-modules/material-modules.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { HomeHeaderComponent } from './home-header/home-header.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { NewHeadlineComponent } from './new-headline/new-headline.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -20,12 +19,13 @@ import { DocumentationPageComponent } from './documentation-page/documentation-p
 import { StudentCardSearchComponent } from './student-card-search/student-card-search.component';
 import { LoadingComponent } from './loading/loading.component';
 
+import { GlobalsService } from './globals.service';
+
 @NgModule({
     declarations: [
 	AppComponent,
 	ConstructionPageComponent,
 	HomePageComponent,
-	HomeHeaderComponent,
 	TimeLineComponent,
 	NewHeadlineComponent,
 	DocumentationPageComponent,
@@ -42,7 +42,7 @@ import { LoadingComponent } from './loading/loading.component';
 	FormsModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
-    providers: [],
+    providers: [GlobalsService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

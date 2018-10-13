@@ -3,17 +3,19 @@ import { HttpClient, HttpParams  } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 
-import { Card } from "../models/Card";
+import { Card } from '../models/Card';
+
+import { GlobalsService } from '../globals.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class StudentCardSearchService {
 
-    constructor(private http: HttpClient) { }
+    constructor(private globals: GlobalsService,
+		private http: HttpClient) { }
 
     searchFor(mat: string): Observable<Card[]> {
-	let params = new HttpParams().set('mat', mat);
-	return this.http.get<Card[]>("http://localhost/casmd/index.php", {params: params});
+	return this.http.get<Card[]>(this.globals.apiurl+"card/available/2018/"+mat);
     }
 }

@@ -30,7 +30,10 @@ export class StudentCardSearchComponent implements OnInit {
 
 	this.card
 	    .searchFor(this.register)
-	    .subscribe(result => this.scResult =result);
+	    .subscribe(result => {
+		console.log(result);
+		this.scResult =result;
+	    });
     }
     cancel() {
 	this.gotoSearch();
