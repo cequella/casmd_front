@@ -19,5 +19,8 @@ export class AppComponent {
 	{icon: "view_quilt",
 	 label: "Matriz Curricular",
 	 href: ""},
+	{icon: "info",
+	 label: "Sobre a gestão",
+	 href: "/sobre"}
     ];
 }
