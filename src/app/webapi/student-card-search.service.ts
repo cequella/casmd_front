@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams  } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
-
-import { Card } from '../models/Card';
+import { Observable } from 'rxjs';
 
 import { GlobalsService } from '../globals.service';
 
@@ -15,7 +13,7 @@ export class StudentCardSearchService {
     constructor(private globals: GlobalsService,
 		private http: HttpClient) { }
 
-    searchFor(mat: string): Observable<Card[]> {
-	return this.http.get<Card[]>(this.globals.apiurl+"card/available/2018/"+mat);
+    searchFor(year: number, mat: string) {
+	return this.http.get(`${this.globals.apiurl}card/available/${year}/${mat}`);
     }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { interval } from 'rxjs';
 import { MdcSnackbar } from '@angular-mdc/web';
+import { HttpErrorResponse } from '@angular/common/http';
 
 import { LoadingComponent }         from '../loading/loading.component';
 import { StudentCardSearchService } from '../webapi/student-card-search.service';
@@ -26,14 +27,13 @@ export class StudentCardSearchComponent implements OnInit {
 
     findCard(form: NgForm, event: any) {
 	this.gotoLoading();
-	this.gotoResult();
-
+	
 	this.card
-	    .searchFor(this.register)
-	    .subscribe(result => {
-		console.log(result);
-		this.scResult =result;
-	    });
+	    .searchFor(2018, this.register)
+	    .subscribe(
+		(result: any) => this.setResult(result.data),
+		(err: HttpErrorResponse) => this.setResult(null)
+	    );
     }
     cancel() {
 	this.gotoSearch();
@@ -67,5 +67,9 @@ export class StudentCardSearchComponent implements OnInit {
     }
     private gotoResult(){
 	this.state =3;
+    }
+    private setResult(data: Card) {
+	this.scResult =data
+	this.gotoResult();
     }
 }

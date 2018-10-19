@@ -11,7 +11,7 @@
 		      label="Matrícula"
 		      maxlength="6"
 		      pattern="[0-9][0-9][0-9][0-9][0-9][0-9]">
-	<mdc-icon leading>person</mdc-icon>
+	<mdc-icon mdcTextFieldIcon leading>person</mdc-icon>
       </mdc-text-field>
     </div>
   </div>
@@ -20,10 +20,19 @@
 
   <div *ngIf="state==3">
     <h1 mdcHeadline6>{{register}}:
-      <span [style.color]="scResult.deliveredAt?'red':'green'">{{scResult.deliveredAt?"Indisponível":"Disponível"}}</span>
+      <span [style.color]="scResult?'green':'red'">{{scResult?"Disponível":"Indisponível"}}</span>
     </h1>
-    <div *ngIf="!scResult.deliveredAt; else noResult">
-      <h1 mdcBody1>A sua carteirinha já está no CA. Deseja agendar horário para resgatá-la?</h1>
+
+    <!-- Found -->
+    <div *ngIf="scResult; else noResult">
+      <h1 mdcBody1>Sua carteirinha de {{scResult.relativeTo}} já está conosco!!!</h1>
+      <div style="text-align: end;">
+	<button mdc-button dense raised (click)="cancel()">Voltar</button>
+      </div>
+    </div>
+    <!--
+    <div *ngIf="scResult; else noResult">
+      <h1 mdcBody1>A sua carteirinha de {{scResult.relativeTo}} já está no CA. Deseja agendar horário para resgatá-la?</h1>
       <div style="text-align: center;">
 	<mdc-text-field #dateField
 	  outlined
@@ -43,12 +52,17 @@
 	<button mdc-button dense raised (click)="schedule(dateField.value, timeField.value)">Agendar</button>
       </div>
     </div>
+    -->
+    <!-- /Found -->
+
+    <!-- Not Found -->
     <ng-template #noResult>
       <h1 mdcBody1>Infelizmente sua carteirinha ainda não está conosco.</h1>
       <div style="text-align: end;">
 	<button mdc-button dense raised (click)="cancel()">Voltar</button>
       </div>
     </ng-template>
+    <!-- /Not Found -->
   </div>
 
 </form>
