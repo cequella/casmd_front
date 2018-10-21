@@ -1,0 +1,33 @@
+<style>
+  form {
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  form > * {
+      margin-bottom: 1em;
+  }
+</style>
+
+<form>
+  <p mdcHeadline5>Sobre a chapa</p>
+  <mdc-text-field #teamName
+		  label="Nome"
+		  maxlength="50"
+		  outlined
+		  required
+		  [helperText]="teamNameHelper"></mdc-text-field>
+  <mdc-text-field-helper-text #teamNameHelper="mdcHelperText" validation>
+    <!--<span *ngIf="demoForm.errors?.required">Username is required</span>-->
+    <span>Username is required</span>
+  </mdc-text-field-helper-text>
+
+  <mdc-text-field #inaugurationDate
+		  outlined
+		  required
+		  type="date"
+		  label="Data de Posse*">
+    <mdc-icon mdcTextFieldIcon leading>event</mdc-icon>
+  </mdc-text-field>
+
+  <mdc-textarea #description label="Descrição da chapa" fullwidth rows="8"></mdc-textarea>
+</form>

@@ -16,7 +16,8 @@ import {
     MdcElevationModule,
     MdcTabBarModule,
     MdcFabModule,
-    MdcRippleModule
+    MdcRippleModule,
+    MdcTextFieldModule
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -38,7 +39,8 @@ import {
 	MdcElevationModule,
 	MdcTabBarModule,
 	MdcFabModule,
-	MdcRippleModule
+	MdcRippleModule,
+	MdcTextFieldModule 
     ],
     exports: [
 	// Angular Material
@@ -58,7 +60,8 @@ import {
 	MdcElevationModule,
 	MdcTabBarModule,
 	MdcFabModule,
-	MdcRippleModule
+	MdcRippleModule,
+	MdcTextFieldModule 
     ],
     declarations: []
 })

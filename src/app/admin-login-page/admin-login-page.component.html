@@ -1,0 +1,49 @@
+<style>
+  .parent {
+  position: relative;
+  }
+  .child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: right;
+  }
+  .child > mdc-text-field {
+      margin-bottom: 1em;
+  }
+</style>
+
+<div class="parent">
+  <form id="loginForm" class="child"
+	[formGroup]="loginForm"
+	(ngSubmit)="submitForm()">
+    <mdc-text-field #username
+		    formControlName="username"
+		    label="Username"
+		    maxlength="10"
+		    outlined
+		    required
+		    [helperText]="usernameHelper"></mdc-text-field>
+    <mdc-text-field #password
+		    formControlName="password"
+		    type="password"
+		    label="Password"
+		    outlined
+		    required
+		    [helperText]="passwordHelper"></mdc-text-field>
+    <button mdc-button #submit
+	    secondary
+	    raised
+	    icon
+	    [disabled]="loginForm.errors"><mdc-icon>send</mdc-icon>Login</button>
+    
+    <mdc-text-field-helper-text #usernameHelper="mdcHelperText" validation>
+      <span *ngIf="loginForm.errors?.required">Username is required</span>
+    </mdc-text-field-helper-text>
+    <mdc-text-field-helper-text #passwordHelper="mdcHelperText" validation>
+      <span *ngIf="loginForm.errors?.required">Password is required</span>
+    </mdc-text-field-helper-text>
+  </form>
+
+</div>
