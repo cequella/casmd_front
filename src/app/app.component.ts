@@ -15,7 +15,7 @@ export class AppComponent {
 	 href: ""},
 	{icon: "description",
 	 label: "Documentos",
-	 href: ""},
+	 href: "/documentos"},
 	{icon: "view_quilt",
 	 label: "Matriz Curricular",
 	 href: ""},

@@ -16,7 +16,10 @@ import {
     MdcElevationModule,
     MdcTabBarModule,
     MdcFabModule,
-    MdcRippleModule
+    MdcRippleModule,
+    MdcTextFieldModule,
+    MdcLinearProgressModule,
+    MdcSnackbarModule
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -38,7 +41,10 @@ import {
 	MdcElevationModule,
 	MdcTabBarModule,
 	MdcFabModule,
-	MdcRippleModule
+	MdcRippleModule,
+	MdcTextFieldModule,
+	MdcLinearProgressModule,
+	MdcSnackbarModule
     ],
     exports: [
 	// Angular Material
@@ -58,7 +64,10 @@ import {
 	MdcElevationModule,
 	MdcTabBarModule,
 	MdcFabModule,
-	MdcRippleModule
+	MdcRippleModule,
+	MdcTextFieldModule,
+	MdcLinearProgressModule,
+	MdcSnackbarModule
     ],
     declarations: []
 })
