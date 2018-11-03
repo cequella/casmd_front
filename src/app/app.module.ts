@@ -18,8 +18,10 @@ import { environment } from '../environments/environment';
 import { DocumentationPageComponent } from './documentation-page/documentation-page.component';
 import { StudentCardSearchComponent } from './student-card-search/student-card-search.component';
 import { LoadingComponent } from './loading/loading.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { GlobalsService } from './globals.service';
+import { HelpingFooterComponent } from './helping-footer/helping-footer.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +32,8 @@ import { GlobalsService } from './globals.service';
 	NewHeadlineComponent,
 	DocumentationPageComponent,
 	StudentCardSearchComponent,
-	LoadingComponent
+	LoadingComponent,
+	HelpingFooterComponent
     ],
     imports: [
 	BrowserModule,
@@ -40,6 +43,7 @@ import { GlobalsService } from './globals.service';
 	AppRoutingModule,
 	FlexLayoutModule,
 	FormsModule,
+	AngularFontAwesomeModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [GlobalsService],
