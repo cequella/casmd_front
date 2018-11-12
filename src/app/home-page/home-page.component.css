@@ -1,12 +1,6 @@
 /* Mobile screens */
-header {
-    width: 90vw;
-    margin: 8px auto;
-}
-
-main {
-    width: 95vw;
-    margin: 0 auto;
+header, main {
+    width: 100%;
 }
 
 /* For big screens */
