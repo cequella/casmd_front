@@ -1,0 +1,5 @@
+@import "~@angular-mdc/theme/material";
+
+.masonry-image-list {
+  @include mdc-image-list-masonry-columns(2);
+}
