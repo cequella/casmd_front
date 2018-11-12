@@ -19,33 +19,11 @@ import {
     MdcRippleModule,
     MdcTextFieldModule,
     MdcLinearProgressModule,
-    MdcSnackbarModule
+    MdcSnackbarModule,
+    MdcImageListModule 
 } from '@angular-mdc/web';
 
 @NgModule({
-    imports: [
-	// Angular Material
-	MatCardModule,
-	MatListModule,
-	MatIconModule,
-
-	// MDC
-	MdcIconModule,
-	MdcTopAppBarModule,
-	MdcDrawerModule,
-	MdcListModule,
-	MdcTypographyModule,
-	MdcCardModule,
-	MdcButtonModule,
-	MdcIconButtonModule,
-	MdcElevationModule,
-	MdcTabBarModule,
-	MdcFabModule,
-	MdcRippleModule,
-	MdcTextFieldModule,
-	MdcLinearProgressModule,
-	MdcSnackbarModule
-    ],
     exports: [
 	// Angular Material
 	MatCardModule,
@@ -67,7 +45,8 @@ import {
 	MdcRippleModule,
 	MdcTextFieldModule,
 	MdcLinearProgressModule,
-	MdcSnackbarModule
+	MdcSnackbarModule,
+	MdcImageListModule
     ],
     declarations: []
 })
