@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule }        from '@angular/material/card';
+import { MatListModule }        from '@angular/material/list';
+import { MatIconModule }        from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule }      from '@angular/material/dialog';
 
 import {
     MdcIconModule,
@@ -29,6 +31,8 @@ import {
 	MatCardModule,
 	MatListModule,
 	MatIconModule,
+	MatProgressBarModule,
+	MatDialogModule,
 
 	// MDC
 	MdcIconModule,
