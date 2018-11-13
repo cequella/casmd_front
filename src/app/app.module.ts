@@ -23,6 +23,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { GlobalsService } from './globals.service';
 import { HelpingFooterComponent } from './helping-footer/helping-footer.component';
 import { CrowdfundingPageComponent } from './crowdfunding-page/crowdfunding-page.component';
+import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item.component';
 
 @NgModule({
     declarations: [
@@ -35,7 +36,8 @@ import { CrowdfundingPageComponent } from './crowdfunding-page/crowdfunding-page
 	StudentCardSearchComponent,
 	LoadingComponent,
 	HelpingFooterComponent,
-	CrowdfundingPageComponent
+	CrowdfundingPageComponent,
+	CrowdfundingItemComponent
     ],
     imports: [
 	BrowserModule,

@@ -11,7 +11,7 @@
 <mdc-image-list #demomasonry masonry="True" textProtection="False">
 
   <mdc-image-list-item *ngFor="let item of masonryImages">
-    <img mdcImageListImage src="{{item.image}}"/>
+    <img mdcImageListImage src="{{item.image}}" routerLink="/vaquinhas/1"/>
     <mdc-image-list-supporting>
       <span mdcImageListLabel>{{item.label}}</span>
     </mdc-image-list-supporting>
