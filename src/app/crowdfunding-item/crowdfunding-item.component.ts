@@ -7,6 +7,8 @@ import { Component,
 	 ViewChild
        } from '@angular/core';
 
+import { MdcSnackbar } from '@angular-mdc/web';
+
 @Component({
     selector: 'app-crowdfunding-item',
     templateUrl: './crowdfunding-item.component.html',
@@ -18,8 +20,10 @@ export class CrowdfundingItemComponent implements OnInit, AfterViewInit, OnDestr
 
     topHided    =false;
     bottomHided =true;
+    favorited   =false;
     
-    constructor(private elementRef: ElementRef) { }
+    constructor(private elementRef: ElementRef,
+		private snackbar: MdcSnackbar) { }
 
     ngOnInit() {
 	this.topFab.exited    =false;
@@ -49,5 +53,22 @@ export class CrowdfundingItemComponent implements OnInit, AfterViewInit, OnDestr
 	}
     }
 
-    private 
+    favorite() {
+	this.favorited =!this.favorited;
+	this.showSnackbar();
+    }
+
+    private showSnackbar() {
+	const snackbarRef = this.snackbar.show("Agora você está acompanhando a vaquinha!!!", "Desfazer", {
+	    align:           "center",
+	    multiline:       true,
+	    dismissOnAction: true,
+	    focusAction:     false,
+	    actionOnBottom:  true
+	});
+	
+	snackbarRef.afterDismiss().subscribe(() => {
+	    console.log('The snack-bar was dismissed');
+	});
+    }
 }
