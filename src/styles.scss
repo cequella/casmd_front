@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app-theme';
+@import "~@angular-mdc/theme/material";
 
 html, body {
     overflow-x: hidden;
@@ -19,4 +20,10 @@ mdc-drawer {
 .category-header > .material-icons {
     vertical-align: sub;
     margin-right: 0.2em;
+}
+.topFab {
+    @include mdc-fab-shape-radius(4px 28px 28px 28px);
+}
+.bottomFab {
+    @include mdc-fab-shape-radius(28px 28px 4px 28px);
 }
