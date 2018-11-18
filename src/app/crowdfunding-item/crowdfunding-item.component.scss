@@ -1,0 +1,16 @@
+.temp {
+    width: 100%;
+    height: calc(56.25vw + 56px);
+    background-image: url('https://material-components-web.appspot.com/images/photos/3x2/16.jpg');
+    margin-top: -56px !important;
+}
+.headerFab {
+    transform: translateY(-50%);
+    margin: 0 16px;
+    float: right;
+}
+.description {
+    margin: 8px;
+    margin-top: 36px;
+    margin-bottom: 64px;
+}

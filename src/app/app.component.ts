@@ -8,6 +8,7 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
     menu  =[
 	{icon: "home",        label: "Home",       href: ""},
-	{icon: "description", label: "Documentos", href: "/documentos"}
+	{icon: "description", label: "Documentos", href: "/documentos"},
+	{icon: "trending_up", label: "Vaquinhas",  href: "/vaquinhas"}
     ];
 }
