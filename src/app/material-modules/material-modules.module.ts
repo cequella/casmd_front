@@ -22,7 +22,8 @@ import {
     MdcTextFieldModule,
     MdcLinearProgressModule,
     MdcSnackbarModule,
-    MdcImageListModule
+    MdcImageListModule,
+    MdcFormFieldModule
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -51,7 +52,8 @@ import {
 	MdcLinearProgressModule,
 	MdcSnackbarModule,
 	MdcImageListModule,
-	MdcSnackbarModule 
+	MdcSnackbarModule,
+	MdcFormFieldModule
     ],
     declarations: []
 })

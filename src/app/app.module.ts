@@ -1,7 +1,9 @@
 import { BrowserModule }    from '@angular/platform-browser';
 import { NgModule }         from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }      from '@angular/forms';
+import { FormsModule,
+	 ReactiveFormsModule
+       } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,6 +27,7 @@ import { GlobalsService } from './globals.service';
 import { HelpingFooterComponent } from './helping-footer/helping-footer.component';
 import { CrowdfundingPageComponent } from './crowdfunding-page/crowdfunding-page.component';
 import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +42,7 @@ import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item
 	HelpingFooterComponent,
 	CrowdfundingPageComponent,
 	CrowdfundingItemComponent,
+	LoginPageComponent,
     ],
     imports: [
 	BrowserModule,
@@ -49,6 +53,7 @@ import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item
 	AppRoutingModule,
 	FlexLayoutModule,
 	FormsModule,
+	ReactiveFormsModule,
 	AngularFontAwesomeModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],

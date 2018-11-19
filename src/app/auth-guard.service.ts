@@ -5,7 +5,7 @@ import { CanActivate } from '@angular/router';
     providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
-    private accessAllowed: boolean =true;
+    private accessAllowed: boolean =false;
 
     constructor() { }
 
@@ -13,7 +13,7 @@ export class AuthGuardService implements CanActivate {
 	return this.accessAllowed;
     }
 
-    change() {
-	this.accessAllowed =!this.accessAllowed;
+    validate(username: string, password: string) {
+	this.accessAllowed =(username=="cequella" && password=="1234");
     }
 }

@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm">
+  <mdc-form-field>
+    <mdc-text-field formControlName="username" label="Username" outlined [helperText]="usernameHelper" required minlength="3"></mdc-text-field>
+    <mdc-text-field-helper-text #usernameHelper="mdcHelperText" validation>
+      <span *ngIf="loginForm.controls['username'].errors?.required">Username is required</span>
+      <span *ngIf="loginForm.controls['username'].errors?.minlength">Username is not long enough</span>
+    </mdc-text-field-helper-text>
+  </mdc-form-field>
+  <mdc-form-field>
+    <mdc-text-field formControlName="password" label="Password" outlined [helperText]="passwordHelper" required minlength="3" type="password"></mdc-text-field>
+    <mdc-text-field-helper-text #passwordHelper="mdcHelperText" validation>
+      <span *ngIf="loginForm.controls['password'].errors?.required">Password is required</span>
+      <span *ngIf="loginForm.controls['password'].errors?.minlength">Password is not long enough</span>
+    </mdc-text-field-helper-text>
+  </mdc-form-field>
+  <button mdc-button outlined (click)="validate()">Login</button>
+</form>
