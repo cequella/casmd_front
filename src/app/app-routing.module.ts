@@ -8,6 +8,7 @@ import { CrowdfundingItemComponent }  from './crowdfunding-item/crowdfunding-ite
 
 const routes: Routes = [
     { path: '',              component: HomePageComponent },
+    { path: 'admin',         redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'documentos',    component: DocumentationPageComponent },
     { path: 'vaquinhas',     component: CrowdfundingPageComponent },
     { path: 'vaquinhas/:id', component: CrowdfundingItemComponent }

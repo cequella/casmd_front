@@ -10,7 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ConstructionPageComponent } from './construction-page/construction-page.component';
 import { MaterialModulesModule } from './material-modules/material-modules.module';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AdminModule } from './admin/admin.module';
+import { AppRoutingModule } from './app-routing.module';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { NewHeadlineComponent } from './new-headline/new-headline.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -37,13 +38,14 @@ import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item
 	LoadingComponent,
 	HelpingFooterComponent,
 	CrowdfundingPageComponent,
-	CrowdfundingItemComponent
+	CrowdfundingItemComponent,
     ],
     imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	MaterialModulesModule,
 	HttpClientModule,
+	AdminModule,
 	AppRoutingModule,
 	FlexLayoutModule,
 	FormsModule,
