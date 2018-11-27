@@ -23,11 +23,11 @@ import { StudentCardSearchComponent } from './student-card-search/student-card-s
 import { LoadingComponent } from './loading/loading.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-import { GlobalsService } from './globals.service';
 import { HelpingFooterComponent } from './helping-footer/helping-footer.component';
 import { CrowdfundingPageComponent } from './crowdfunding-page/crowdfunding-page.component';
 import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginPageComponent, WrongPasswordAlertDialog } from './login-page/login-page.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
     declarations: [
@@ -43,6 +43,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 	CrowdfundingPageComponent,
 	CrowdfundingItemComponent,
 	LoginPageComponent,
+	WrongPasswordAlertDialog,
+	ErrorPageComponent
     ],
     imports: [
 	BrowserModule,
@@ -57,7 +59,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 	AngularFontAwesomeModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
-    providers: [GlobalsService],
-    bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent],
+    entryComponents: [WrongPasswordAlertDialog]
 })
 export class AppModule { }

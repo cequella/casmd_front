@@ -3,17 +3,16 @@ import { HttpClient, HttpParams  } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { GlobalsService } from '../globals.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class StudentCardSearchService {
 
-    constructor(private globals: GlobalsService,
-		private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     searchFor(year: number, mat: string) {
-	return this.http.get(`${this.globals.apiurl}card/available/${year}/${mat}`);
+	return this.http.get(`${environment.api}/card/available/${year}/${mat}`);
     }
 }
