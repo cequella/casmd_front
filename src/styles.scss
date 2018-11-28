@@ -1,6 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
 @import './app-theme';
 @import "~@angular-mdc/theme/material";
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 html, body {
     overflow-x: hidden;

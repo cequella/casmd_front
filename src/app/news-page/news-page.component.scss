@@ -12,6 +12,7 @@ h4 {
     font-style: oblique
 }
 h5 {
+    font-family: 'Merriweather', serif !important;
     color: #756868;
     text-align: center;
     margin-top: 0;
@@ -44,6 +45,7 @@ h6 {
 
 	.authorName {
 	    font-weight: 600;
+	    border-bottom: 2px solid $mdc-theme-secondary;
 	}
     }
 }
