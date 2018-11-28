@@ -28,6 +28,7 @@ import { CrowdfundingPageComponent } from './crowdfunding-page/crowdfunding-page
 import { CrowdfundingItemComponent } from './crowdfunding-item/crowdfunding-item.component';
 import { LoginPageComponent, WrongPasswordAlertDialog } from './login-page/login-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { NewsPageComponent } from './news-page/news-page.component';
 
 @NgModule({
     declarations: [
@@ -44,7 +45,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 	CrowdfundingItemComponent,
 	LoginPageComponent,
 	WrongPasswordAlertDialog,
-	ErrorPageComponent
+	ErrorPageComponent,
+	NewsPageComponent
     ],
     imports: [
 	BrowserModule,

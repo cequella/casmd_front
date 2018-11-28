@@ -1,0 +1,16 @@
+<header>
+  <img [src]="news.image">
+</header>
+
+<main mdcTypography>
+  <h6 mdcOverline>{{root}} ¬ <a class="tag">{{news.tag.label}}</a></h6>
+  <h4 mdcHeadline3>{{news.title}}</h4>
+  <h5 mdcHeadline4>{{news.headline}}</h5>
+  <div class="author">
+    <img width="48" height="48" [src]="news.author.photo">
+    <h6 mdcOverline>por <span class="authorName">{{news.author.name}}</span></h6>
+  </div>
+  <div [innerHTML]="news.content"></div>
+</main>
+
+<app-helping-footer subject="[Ajuda] - {{news.title}}"></app-helping-footer>

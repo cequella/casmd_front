@@ -9,6 +9,7 @@ import { DocumentationPageComponent } from './documentation-page/documentation-p
 import { CrowdfundingPageComponent }  from './crowdfunding-page/crowdfunding-page.component';
 import { CrowdfundingItemComponent }  from './crowdfunding-item/crowdfunding-item.component';
 import { ErrorPageComponent }         from './error-page/error-page.component';
+import { NewsPageComponent }          from './news-page/news-page.component';
 
 const routes: Routes = [
     { path: '',              component: HomePageComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: 'documentos',    component: DocumentationPageComponent },
     { path: 'vaquinhas',     component: CrowdfundingPageComponent },
     { path: 'vaquinhas/:id', component: CrowdfundingItemComponent },
+    { path: 'noticia/:id',   component: NewsPageComponent },
     { path: '**',            component: ErrorPageComponent }
 ];
 
