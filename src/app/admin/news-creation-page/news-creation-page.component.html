@@ -1,0 +1,37 @@
+<style>
+  form {
+      display: grid;
+      grid-gap: 1em;
+  }
+  form, mdc-form-field, mdc-textarea {
+      width: 100%;
+  }
+  button {
+      width: fit-content;
+      float: right;
+  }
+</style>
+
+<form>
+  <mdc-form-field>
+    <mdc-text-field fullwidth required
+		    label="Título"
+		    minlength="15"
+		    maxlength="30"></mdc-text-field>
+  </mdc-form-field>
+  <mdc-form-field>
+    <mdc-text-field fullwidth required
+		    label="Manchete"
+		    minlength="15"
+		    maxlength="60"></mdc-text-field>
+  </mdc-form-field>
+  <mdc-form-field>
+    <mdc-textarea fullwidth required
+		  label="Conteúdo"
+		  rows="10"></mdc-textarea>
+  </mdc-form-field>
+  <button mdc-button primary raised dense type="submit">
+    <mdc-icon>save</mdc-icon>
+    Publicar
+  </button>
+</form>
