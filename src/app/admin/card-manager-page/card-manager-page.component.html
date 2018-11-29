@@ -1,0 +1,44 @@
+<!-- Cards list -->
+<table mdcTypography>
+  <tr>
+    <th>Mat</th>
+    <!--<th>Nome</th>-->
+    <th></th>
+  </tr>
+  <tr *ngFor="let item of cardList">
+    <td>{{item.studentMat}}</td>
+    <!--<td>{{item.name}}</td>-->
+    <td class="action">
+      <button mdc-button primary dense raised [disabled]="item.deliveredAt" (click)="closeCardReg(item)">
+	{{(item.deliveredAt)? 'Entregue' : 'Entregar'}}
+      </button>
+    </td>
+  </tr>
+</table>
+<!-- /Cards list --->
+
+<!-- New card register form -->
+<form [formGroup]="newCardForm" (ngSubmit)="newCardReg()" style="margin-top: 1em; margin-bottom: 1em;">
+  <mdc-form-field>
+    <mdc-text-field outlined required
+		    formControlName="matControl"
+		    label="Mat"
+		    [helperText]="matFormHelper"
+		    minlength="6"
+		    maxlength="6"></mdc-text-field>
+    <mdc-text-field-helper-text #matFormHelper="mdcHelperText" validation>
+      <span *ngIf="newCardForm.controls['matControl'].hasError('required')">Mat obrigatório</span>
+    </mdc-text-field-helper-text>
+  </mdc-form-field>
+  <mdc-form-field>
+    <mdc-text-field outlined required
+		    formControlName="nameControl"
+		    label="Nome"
+		    [helperText]="nameFormHelper"></mdc-text-field>
+    <mdc-text-field-helper-text #nameFormHelper="mdcHelperText" validation>
+      <span *ngIf="newCardForm.controls['nameControl'].hasError('required')">Nome obrigatório</span>
+    </mdc-text-field-helper-text>
+  </mdc-form-field>
+  <button type="submit" mdc-button secondary dense raised>Cadastrar</button>
+</form>
+<!-- /New card register form -->
