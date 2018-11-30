@@ -1,4 +1,4 @@
-export class Card {
+export interface Card {
     id:           number;
     studentMat:  number;
     relativeTo:  Date;

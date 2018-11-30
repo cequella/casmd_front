@@ -1,14 +1,9 @@
-import { Component,
-	 OnInit,
-	 Output,
-	 EventEmitter
-       } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { MdcTabActivatedEvent } from '@angular-mdc/web';
 
 import { News } from '../models/News';
-
-import { NewsRequestService } from '../webapi/news-request.service';
+import { NewsRequestService } from '../news-request.service';
 
 @Component({
     selector: 'app-timeline',
@@ -16,8 +11,6 @@ import { NewsRequestService } from '../webapi/news-request.service';
     styleUrls: ['./time-line.component.scss']
 })
 export class TimeLineComponent implements OnInit {
-    @Output() onNewsClick =new EventEmitter();
-    
     tabList:     string[];
     newsList:    News[];
     currentList: News[];
@@ -33,8 +26,7 @@ export class TimeLineComponent implements OnInit {
 		this.currentList =list;
 
 		this.tabList =["Recentes"];
-		//for(let item of list) this.tabList.push("#"+item.hashtag);
-		for(let item of list) this.tabList.push("#"+item.tag_id);
+		for(let item of list) this.tabList.push("#"+item.hashtag);
 		
 		// Remove double
 		this.tabList =this.tabList.filter((el, i, a) => i === a.indexOf(el))
@@ -48,8 +40,7 @@ export class TimeLineComponent implements OnInit {
 	} else {
 	    // Filter content by tag
 	    let hashtag =event.tab.label.substr(1); //Remove the # sign
-	    //this.currentList =this.newsList.filter((el, i, a) => el.hashtag==hashtag);
-	    this.currentList =this.newsList.filter((el, i, a) => el.tag_id==1);
+	    this.currentList =this.newsList.filter((el, i, a) => el.hashtag==hashtag);
 	}
     }
 
