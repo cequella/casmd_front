@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,
+	 OnInit,
+	 Input,
+	 Output,
+	 EventEmitter
+       } from '@angular/core';
 
 import { MdcTabActivatedEvent } from '@angular-mdc/web';
 
-import { News } from '../models/News';
-import { NewsRequestService } from '../news-request.service';
+import { Post } from '../models/Post';
 
 @Component({
     selector: 'app-timeline',
@@ -11,37 +15,33 @@ import { NewsRequestService } from '../news-request.service';
     styleUrls: ['./time-line.component.scss']
 })
 export class TimeLineComponent implements OnInit {
-    tabList:     string[];
-    newsList:    News[];
-    currentList: News[];
-    lastTab:     News;
+    @Input("content")    fullPostList: Post[];
+    @Output("postClick") postClick =new EventEmitter();
 
-    constructor(private newsRequest: NewsRequestService) { }
+    tabList:         string[] =["Principais"];
+    currentPostList: Post[];
 
-    ngOnInit() {
-	this.newsRequest
-	    .top()
-	    .subscribe(list => {
-		this.newsList    =list;
-		this.currentList =list;
+    constructor() { }
 
-		this.tabList =["Recentes"];
-		for(let item of list) this.tabList.push("#"+item.hashtag);
-		
-		// Remove double
-		this.tabList =this.tabList.filter((el, i, a) => i === a.indexOf(el))
-	    });
+    ngOnInit(){
+	for(let post of this.fullPostList) {
+	    let tag =post.tag.name;
+	    if(this.tabList.indexOf(name)<0) this.tabList.push(`#${tag}`);
+	}
+	this.currentPostList =this.fullPostList;
     }
 
     changeContent(event: MdcTabActivatedEvent) {
 	if(event.index ==0){
 	    // Full content
-	    this.currentList =this.newsList;
+	    this.currentPostList =this.fullPostList;
 	} else {
 	    // Filter content by tag
 	    let hashtag =event.tab.label.substr(1); //Remove the # sign
-	    this.currentList =this.newsList.filter((el, i, a) => el.hashtag==hashtag);
+	    this.currentPostList =this.fullPostList.filter((el, i, a) => el.tag.name==hashtag);
 	}
     }
-
+    postSelection(post: any) {
+	this.postClick.emit(post);
+    }
 }

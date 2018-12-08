@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Post } from '../models/Post';
+
 @Component({
     selector: 'app-news-page',
     templateUrl: './news-page.component.html',

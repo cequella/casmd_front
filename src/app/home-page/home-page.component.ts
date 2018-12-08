@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,
+	 OnInit,
+       } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Notice } from '../models/Notice';
+import { Post } from '../models/Post';
+
+import { PostsService } from '../webapi/posts.service';
 
 @Component({
     selector: 'app-home-page',
@@ -8,17 +13,23 @@ import { Notice } from '../models/Notice';
     styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-    noticeList: Notice[];
-    currentNotice: Notice ={
-	id: 0,
-	title: "MW19: Começaram as inscrições",
-	startDate: new Date("2019-03-15T13:00:00.000Z"),
-	description: "Garanta já sua credencial"
-    };
+    posts: Post[];
     
-    constructor() { }
+    constructor(private router: Router,
+		private postsService: PostsService) { }
 
     ngOnInit() {
+	let post_S =this.postsService.listTop().subscribe(
+	    content => {
+		this.posts =content.data;
+		post_S.unsubscribe();
+	    },
+	    error => {
+		post_S.unsubscribe();
+	    }
+	);
     }
-
+    openPost(post: Post) {
+	this.router.navigate(['/noticia', post.id]);
+    }
 }
