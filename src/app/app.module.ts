@@ -30,6 +30,10 @@ import { LoginPageComponent, WrongPasswordAlertDialog } from './login-page/login
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 
+//Resolver
+import { HomeResolverService } from './resolvers/home-resolver.service';
+import { PostResolverService } from './resolvers/post-resolver.service';
+
 @NgModule({
     declarations: [
 	AppComponent,
@@ -61,7 +65,11 @@ import { NewsPageComponent } from './news-page/news-page.component';
 	AngularFontAwesomeModule,
 	ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
-    providers: [],
+    providers: [
+	// Resolvers
+	HomeResolverService,
+	PostResolverService
+    ],
     bootstrap: [AppComponent],
     entryComponents: [WrongPasswordAlertDialog]
 })

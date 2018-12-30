@@ -4,7 +4,7 @@
   </mdc-tab-scroller>
 </mdc-tab-bar>
 
-<ng-container *ngFor="let item of currentPostList">
+<ng-container *ngFor="let item of postList">
   <app-new-headline [content]="item" (click)="postSelection(item)"></app-new-headline>
   <mdc-list-divider padded="False"></mdc-list-divider>
 </ng-container>

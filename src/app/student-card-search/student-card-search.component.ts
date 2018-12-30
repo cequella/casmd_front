@@ -29,7 +29,7 @@ export class StudentCardSearchComponent implements OnInit {
 	this.gotoLoading();
 	
 	this.card
-	    .searchFor(2018, this.register)
+	    .searchFor("2018", this.register)
 	    .subscribe(
 		(result: any) => this.setResult(result.data),
 		(err: HttpErrorResponse) => this.setResult(null)

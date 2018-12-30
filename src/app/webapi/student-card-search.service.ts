@@ -12,7 +12,7 @@ export class StudentCardSearchService {
 
     constructor(private http: HttpClient) { }
 
-    searchFor(year: number, mat: string) {
-	return this.http.get(`${environment.api}/card/available/${year}/${mat}`);
+    searchFor(year: string, mat: string) {
+	return this.http.get(`${environment.api}/card/${mat}/${year}`);
     }
 }

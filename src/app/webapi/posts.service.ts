@@ -11,10 +11,14 @@ import { Post }    from '../models/Post';
     providedIn: 'root'
 })
 export class PostsService {
+    private readonly endpoint: string =`${environment.api}/post`;
 
     constructor(private http: HttpClient) { }
 
     listTop(): Observable<LARAVEL<Post[]>> {
-	return this.http.get<LARAVEL<Post[]>>(`${environment.api}/posts`);
+	return this.http.get<LARAVEL<Post[]>>(this.endpoint);
+    }
+    post(id: string): Observable<LARAVEL<Post>> {
+	return this.http.get<LARAVEL<Post>>(`${this.endpoint}/${id}`);
     }
 }

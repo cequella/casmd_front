@@ -1,11 +1,14 @@
 import { Component,
-	 OnInit,
+	 OnInit
        } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,
+	 ActivatedRoute
+       } from '@angular/router';
+
+import { Observable } from 'rxjs';
+import { filter }     from 'rxjs/operators';
 
 import { Post } from '../models/Post';
-
-import { PostsService } from '../webapi/posts.service';
 
 @Component({
     selector: 'app-home-page',
@@ -14,21 +17,15 @@ import { PostsService } from '../webapi/posts.service';
 })
 export class HomePageComponent implements OnInit {
     posts: Post[];
-    
+
     constructor(private router: Router,
-		private postsService: PostsService) { }
+		private route:  ActivatedRoute) {}
 
     ngOnInit() {
-	let post_S =this.postsService.listTop().subscribe(
-	    content => {
-		this.posts =content.data;
-		post_S.unsubscribe();
-	    },
-	    error => {
-		post_S.unsubscribe();
-	    }
-	);
+	let resolver =this.route.snapshot.data;
+	this.posts =resolver.postlist.data;
     }
+
     openPost(post: Post) {
 	this.router.navigate(['/noticia', post.id]);
     }
