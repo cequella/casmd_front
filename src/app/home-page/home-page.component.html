@@ -1,9 +1,8 @@
-<!--
-<header>
-  <app-home-header [content]="currentNotice"></app-home-header>
-</header>
--->
-
 <main>
-  <app-timeline></app-timeline>
+  <ng-container *ngIf="posts; else loadingPosts">
+    <app-timeline [content]="posts" (postClick)="openPost($event)"></app-timeline>
+  </ng-container>
+  <ng-template #loadingPosts>
+    Carregando
+  </ng-template>
 </main>

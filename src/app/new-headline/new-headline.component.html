@@ -1,8 +1,10 @@
 <mdc-ripple secondary="True" [attachTo]="headlineDiv">
   <div #headlineDiv class="headline">
-    <p class="hashtag" mdcOverline>#{{content.hashtag}}</p>
+    <p class="hashtag" mdcOverline>#{{content.tag.name}}</p>
     <h6 class="title" mdcHeadline6>{{content.headline}}</h6>
-    <p class="subtitle" mdcBody2><span class="date">{{content.createdAt | date:"dd/MM/yyyy"}} -</span> {{content.promo}}</p>
+    <p class="subtitle" mdcBody2>
+      <span class="date">{{content.createdAt.date | date:"dd/MM/yyyy"}} -</span> {{content.headline}}
+    </p>
   </div>
 </mdc-ripple>
 

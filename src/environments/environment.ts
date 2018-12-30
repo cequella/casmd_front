@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    api: "http://localhost/casmdback/api"
+    api: "http://localhost/casmdback/public/api"
 };
 
 /*

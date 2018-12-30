@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,
+	 OnInit
+       } from '@angular/core';
+import { Router,
+	 ActivatedRoute
+       } from '@angular/router';
 
-import { Notice } from '../models/Notice';
+import { Observable } from 'rxjs';
+import { filter }     from 'rxjs/operators';
+
+import { Post } from '../models/Post';
 
 @Component({
     selector: 'app-home-page',
@@ -8,17 +16,17 @@ import { Notice } from '../models/Notice';
     styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-    noticeList: Notice[];
-    currentNotice: Notice ={
-	id: 0,
-	title: "MW19: Começaram as inscrições",
-	startDate: new Date("2019-03-15T13:00:00.000Z"),
-	description: "Garanta já sua credencial"
-    };
-    
-    constructor() { }
+    posts: Post[];
+
+    constructor(private router: Router,
+		private route:  ActivatedRoute) {}
 
     ngOnInit() {
+	let resolver =this.route.snapshot.data;
+	this.posts =resolver.postlist.data;
     }
 
+    openPost(post: Post) {
+	this.router.navigate(['/noticia', post.id]);
+    }
 }

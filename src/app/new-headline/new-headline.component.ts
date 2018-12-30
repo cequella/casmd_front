@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { News } from '../models/News';
+import { Post } from '../models/Post';
 
 @Component({
     selector: 'app-new-headline',
@@ -8,11 +8,10 @@ import { News } from '../models/News';
     styleUrls: ['./new-headline.component.scss']
 })
 export class NewHeadlineComponent implements OnInit {
-    @Input() content: News;
+    @Input() content: Post;
 
     constructor() { }
 
     ngOnInit() {
     }
-
 }
