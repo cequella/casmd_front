@@ -6,11 +6,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NewsCreationPageComponent } from './news-creation-page/news-creation-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
+import { AuthGuardService } from '../auth-guard.service';
+
 const routes: Routes = [
-    { path: 'admin', component: AdminComponent, children: [
-	{ path: '',     component: DashboardComponent },
-	{ path: 'news', component: NewsCreationPageComponent },
-	{ path: 'login', component: LoginPageComponent }
+    { path: 'login', component: LoginPageComponent },
+    { path: 'admin', component: AdminComponent, canActivate:[AuthGuardService], children: [
+	{ path: '',     component: DashboardComponent,  },
+	{ path: 'news', component: NewsCreationPageComponent }
     ] }
 ];
 

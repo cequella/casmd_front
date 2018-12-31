@@ -17,8 +17,8 @@ export class SiteComponent implements OnInit {
 
     userMenu  =[
 	{icon: "home",        label: "Home",       href: ""},
-	{icon: "description", label: "Documentos", href: "/site/documentos"},
-	{icon: "trending_up", label: "Vaquinhas",  href: "/site/vaquinhas"}
+	{icon: "description", label: "Documentos", href: "/documentos"},
+	{icon: "trending_up", label: "Vaquinhas",  href: "/vaquinhas"}
     ];
     adminMenu =[
     ];

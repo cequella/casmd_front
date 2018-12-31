@@ -14,7 +14,7 @@ import { HomeResolverService } from './resolvers/home-resolver.service';
 import { PostResolverService } from './resolvers/post-resolver.service';
 
 const routes: Routes = [
-    { path: 'site', component: SiteComponent, children: [
+    { path: '', component: SiteComponent, children: [
 	{ path: '', component: HomePageComponent,
 	  resolve: {postlist: HomeResolverService}
 	},

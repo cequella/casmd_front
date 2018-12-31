@@ -1,3 +1,16 @@
-<p>
-  login-page works!
-</p>
+<form [formGroup]="form">
+
+  <mdc-text-field outlined
+		  label="Username"
+		  formControlName="email">
+    <mdc-icon mdcTextFieldIcon leading>person</mdc-icon>
+  </mdc-text-field>
+  <mdc-text-field outlined
+		  label="Password"
+		  formControlName="password"
+		  type="password">
+    <mdc-icon mdcTextFieldIcon leading>locker</mdc-icon>
+  </mdc-text-field>
+  <button mdc-button dense raised (click)="login()">Login</button>
+
+</form>

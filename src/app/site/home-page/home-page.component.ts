@@ -27,6 +27,6 @@ export class HomePageComponent implements OnInit {
     }
 
     openPost(post: Post) {
-	this.router.navigate(['/site/noticia', post.id]);
+	this.router.navigate(['/noticia', post.id]);
     }
 }

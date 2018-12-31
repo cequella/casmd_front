@@ -15,9 +15,11 @@
       </mdc-text-field>
     </div>
   </div>
-
-  <p *ngIf="state==2">Procurando</p>
-  <!--<app-loading message="Procurando carteirinha" *ngIf="state==2"></app-loading>-->
+  
+  <div *ngIf="state==2">
+    <p>Procurando</p>
+    <mdc-linear-progress determinate="false"></mdc-linear-progress>
+  </div>
 
   <div *ngIf="state==3">
     <h1 mdcHeadline6>{{register}}:
