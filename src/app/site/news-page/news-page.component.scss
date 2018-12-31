@@ -1,0 +1,51 @@
+@import '../../../app-theme';
+
+header > img {
+    width: 100%;
+}
+
+h4 {
+    font-family: 'Merriweather', serif !important;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    font-weight: 900;
+    font-style: oblique
+}
+h5 {
+    font-family: 'Merriweather', serif !important;
+    color: #756868;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+h6 {
+    font-weight: 600;
+    margin-top: 0.5em;
+
+    .tag {
+	font-weight: 400;
+	color: $mdc-theme-secondary;
+	text-shadow: 1px 1px 1px #0000001a;
+	text-decoration: none;
+    }
+}
+
+.author {
+    display: inline-flex;
+    margin-left: 8px;
+    margin-bottom: 1.5em;
+
+    img {
+	border-radius: 50%;
+	box-shadow: 1px 1px 4px 0px rgba(46, 61, 73, 0.34);
+    }
+    h6 {
+	font-weight: 300;
+	margin: auto 1em;
+
+	.authorName {
+	    font-weight: 600;
+	    border-bottom: 2px solid $mdc-theme-secondary;
+	}
+    }
+}

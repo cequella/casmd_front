@@ -4,7 +4,6 @@ import { Observable,
 	 BehaviorSubject,
 	 of
        } from 'rxjs';
-import { map, take } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'

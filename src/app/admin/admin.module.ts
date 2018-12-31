@@ -5,8 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 
-import { MaterialModulesModule } from '../material-modules/material-modules.module';
+import { MaterialModulesModule } from '../material-modules.module';
 import { NewsCreationPageComponent } from './news-creation-page/news-creation-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { NewsCreationPageComponent } from './news-creation-page/news-creation-pa
     declarations: [
 	DashboardComponent,
 	AdminComponent,
-	NewsCreationPageComponent
+	NewsCreationPageComponent,
+	LoginPageComponent
     ]
 })
 export class AdminModule { }
