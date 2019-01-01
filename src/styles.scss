@@ -15,11 +15,13 @@ mdc-drawer {
 .accent-color {
     color: mat-color($accent) !important;
 }
-.category-header {
+h6.category-header {
     color: $mdc-theme-secondary !important;
     text-shadow: 0px 0px 1px #00000024;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
 }
-.category-header > .material-icons {
+h6.category-header > mdc-icon {
     vertical-align: sub;
     margin-right: 0.2em;
 }

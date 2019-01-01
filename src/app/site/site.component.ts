@@ -13,25 +13,14 @@ import { AuthGuardService} from '../auth-guard.service';
     styleUrls: ['./site.component.css']
 })
 export class SiteComponent implements OnInit {
-    logged: Observable<boolean>;
-
-    userMenu  =[
+    menu  =[
 	{icon: "home",        label: "Home",       href: ""},
 	{icon: "description", label: "Documentos", href: "/documentos"},
 	{icon: "trending_up", label: "Vaquinhas",  href: "/vaquinhas"}
     ];
-    adminMenu =[
-    ];
-    menu: any[];
 
-    constructor(private router: Router,
-		private auth:   AuthGuardService) {}
+    constructor(private router: Router) {}
 
     ngOnInit() {
-	this.logged =this.auth.canActivate();
-    }
-    logout() {
-	this.auth.logout();
-	this.router.navigate(['']);
     }
 }
