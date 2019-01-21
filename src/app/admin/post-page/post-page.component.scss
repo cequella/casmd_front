@@ -1,0 +1,15 @@
+@import '@angular-mdc/theme/material.scss';
+
+.cancel {
+  @include mdc-button-ink-color(red);
+  @include mdc-states(red);
+}
+
+mdc-text-field {
+    margin-bottom: 1em;
+}
+
+:host ::ng-deep .ck-editor__editable {
+    min-height: 60vh !important;
+    margin-bottom: 1em;
+}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule,
 	 ReactiveFormsModule
        } from '@angular/forms';
+import { CKEditorModule }   from '@ckeditor/ckeditor5-angular';
 
 import { StorageServiceModule }  from 'angular-webstorage-service';
 import { MaterialModulesModule } from '../material-modules.module';
@@ -16,6 +17,10 @@ import { NewsCreationPageComponent } from './news-creation-page/news-creation-pa
 import { LoginPageComponent } from './login-page/login-page.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StudentCardPageComponent,
+	 ActionBottomSheet
+       } from './student-card-page/student-card-page.component';
+import { PostPageComponent } from './post-page/post-page.component';
 
 @NgModule({
     imports: [
@@ -23,6 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 	AdminRoutingModule,
 	MaterialModulesModule,
 	StorageServiceModule,
+	CKEditorModule,
 
 	FormsModule,
 	ReactiveFormsModule
@@ -31,11 +37,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 	DashboardComponent,
 	AdminComponent,
 	NewsCreationPageComponent,
-	LoginPageComponent
+	LoginPageComponent,
+	StudentCardPageComponent,
+	ActionBottomSheet,
+	PostPageComponent
     ],
     providers: [
 	AuthGuardService,
 	LocalStorage
+    ],
+    entryComponents: [
+	ActionBottomSheet
     ]
 })
 export class AdminModule { }

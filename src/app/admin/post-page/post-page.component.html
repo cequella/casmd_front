@@ -1,0 +1,14 @@
+<mdc-text-field
+  label="Título"
+  fullwidth
+  (input)="onInput($event)"
+  (change)="onChange($event)"></mdc-text-field>
+<ckeditor [editor]="editor" data="<p>Hello, world!</p>"></ckeditor>
+
+<div>
+  <button mdc-button class="cancel">Cancelar</button>
+  <button mdc-button primary raised>
+    <mdc-button-label>Salvar</mdc-button-label>
+    <mdc-icon>save</mdc-icon>
+  </button>
+</div>

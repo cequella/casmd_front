@@ -1,10 +1,11 @@
-import { BrowserModule }    from '@angular/platform-browser';
-import { NgModule }         from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule }            from '@angular/platform-browser';
+import { NgModule }                 from '@angular/core';
+import { HttpClientModule }         from '@angular/common/http';
 import { ServiceWorkerModule }      from '@angular/service-worker';
 import { BrowserAnimationsModule }  from '@angular/platform-browser/animations';
 import { FlexLayoutModule }         from '@angular/flex-layout';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FormsModule }              from '@angular/forms';
 import { environment }              from '../environments/environment';
 
 // Modules
@@ -28,6 +29,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 	
 	AdminModule,
 	SiteModule,
+	FormsModule,
 
 	AppRoutingModule,
 	FlexLayoutModule,

@@ -1,4 +1,4 @@
-@import "~@angular-mdc/theme/material";
+@import "@angular-mdc/theme/material";
 
 mdc-image-list {
   @include mdc-image-list-masonry-columns(2);

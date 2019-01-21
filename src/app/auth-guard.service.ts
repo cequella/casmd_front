@@ -36,4 +36,13 @@ export class AuthGuardService implements CanActivate {
 	this.local.drop(this.ACCESS_KEY);
 	this.local.drop(this.USER_KEY);
     }
+
+    data() {
+	if(!this.local.get(this.USER_KEY)) return null;
+
+	let out ={
+	    username: this.local.get(this.USER_KEY)
+	};
+	return out;
+    }
 }

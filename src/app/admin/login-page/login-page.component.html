@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (submit)="login()">
 
   <mdc-text-field outlined
 		  label="Username"
@@ -11,6 +11,5 @@
 		  type="password">
     <mdc-icon mdcTextFieldIcon leading>locker</mdc-icon>
   </mdc-text-field>
-  <button mdc-button dense raised (click)="login()">Login</button>
-
+  <button mdc-button dense raised type="submit">Login</button>
 </form>

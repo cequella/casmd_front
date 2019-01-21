@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 
 import { MatCardModule }        from '@angular/material/card';
 import { MatListModule }        from '@angular/material/list';
-import { MatIconModule }        from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule }      from '@angular/material/dialog';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import {
     MdcIconModule,
@@ -24,7 +24,9 @@ import {
     MdcSnackbarModule,
     MdcImageListModule,
     MdcFormFieldModule,
-    MdcDialogModule
+    MdcDialogModule,
+    MdcMenuModule,
+    MdcButtonLabel
 } from '@angular-mdc/web';
 
 @NgModule({
@@ -32,9 +34,9 @@ import {
 	// Angular Material
 	MatCardModule,
 	MatListModule,
-	MatIconModule,
 	MatProgressBarModule,
 	MatDialogModule,
+	MatBottomSheetModule,
 
 	// MDC
 	MdcIconModule,
@@ -55,7 +57,8 @@ import {
 	MdcImageListModule,
 	MdcSnackbarModule,
 	MdcFormFieldModule,
-	MdcDialogModule
+	MdcDialogModule,
+	MdcMenuModule
     ],
     declarations: []
 })

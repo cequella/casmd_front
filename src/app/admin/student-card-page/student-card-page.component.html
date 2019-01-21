@@ -1,0 +1,19 @@
+<style>
+  button {
+      margin-left: auto;
+  }
+</style>
+
+<main>
+  <h6 mdcHeadline6 class="category-header"><mdc-icon>payment</mdc-icon>Two-line</h6>
+  <mdc-list #twoline twoLine border interactive="false">
+
+    <mdc-list-item>
+      <mdc-list-item-text secondaryText="Secondary text">Single-line item</mdc-list-item-text>
+      <button mdcIconButton (click)="openBottomSheet()">
+        <mdc-icon>more_vert</mdc-icon>
+      </button>
+    </mdc-list-item>
+
+  </mdc-list>
+</main>

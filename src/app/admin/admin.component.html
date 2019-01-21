@@ -1,0 +1,34 @@
+<mdc-top-app-bar #appbar short [fixedAdjustElement]="mainContent">
+  <mdc-top-app-bar-row>
+    <mdc-top-app-bar-section align="start" title="CAdmin">
+      <mdc-icon mdcTopAppBarNavIcon (click)="drawer.open =true">menu</mdc-icon>
+    </mdc-top-app-bar-section>
+    <mdc-top-app-bar-section align="end">
+      <img src="./assets/LogoCA.svg" mdcTopAppBarActionItem>
+    </mdc-top-app-bar-section>
+  </mdc-top-app-bar-row>
+</mdc-top-app-bar>
+
+<mdc-drawer drawer="modal" #drawer>
+  <mdc-drawer-header>
+    <h3 mdcDrawerTitle>Painel do Administrador</h3>
+    <h6 mdcDrawerSubtitle>Bem-vindo, {{user.username}}</h6>
+  </mdc-drawer-header>
+  <mdc-drawer-content>
+    <mdc-list useActivatedClass>
+
+      <mdc-list-item *ngFor="let item of menu" [routerLink]="item.href" (click)="drawer.open =false">
+	<mdc-icon mdcListItemGraphic *ngIf="item.icon">{{item.icon}}</mdc-icon>{{item.label}}
+      </mdc-list-item>
+      <mdc-list-divider></mdc-list-divider>
+      <mdc-list-item (click)="logout()">
+	<mdc-icon mdcListItemGraphic>exit_to_app</mdc-icon>Sair
+      </mdc-list-item>
+      
+    </mdc-list>
+  </mdc-drawer-content>
+</mdc-drawer>
+
+<div #mainContent>
+  <router-outlet></router-outlet>
+</div>

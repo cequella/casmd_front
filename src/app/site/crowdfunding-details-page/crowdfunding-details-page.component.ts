@@ -64,6 +64,7 @@ export class CrowdfundingDetailsPageComponent implements OnInit, AfterViewInit, 
     }
 
     private showSnackbar() {
+	/*
 	const snackbarRef = this.snackbar.show("Agora você está acompanhando a vaquinha!!!", "Desfazer", {
 	    align:           "center",
 	    multiline:       true,
@@ -75,6 +76,7 @@ export class CrowdfundingDetailsPageComponent implements OnInit, AfterViewInit, 
 	snackbarRef.afterDismiss().subscribe(() => {
 	    console.log('The snack-bar was dismissed');
 	});
+	*/
     }
     private makeChart() {
 	let context =this.progress.nativeElement.getContext("2d");
