@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
@@ -8,18 +9,19 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     styleUrls: ['./post-page.component.scss']
 })
 export class PostPageComponent implements OnInit {
-    public editor = ClassicEditor;
+    public Editor = ClassicEditor;
 
+    public postForm = new FormGroup({
+	title: new FormControl('Teste'),
+	content: new FormControl('bla')
+    });
+    
     constructor() { }
 
     ngOnInit() {
     }
 
-    onInput(value: any): void {
-	console.log(value);
-    }
-
-    onChange(value: any): void {
-	console.log(value);
+    submit() {
+	console.log(this.postForm.value);
     }
 }

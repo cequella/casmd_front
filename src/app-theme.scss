@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 @include mat-core();
 
 $primary: mat-palette($mat-light-blue);
@@ -12,4 +12,4 @@ $theme: mat-light-theme($primary, $accent);
 $mdc-theme-primary:   #363640; // change primary color example
 $mdc-theme-secondary: #00e595; // change secondary color example
 
-@import "~@angular-mdc/theme/material";
+@import "@angular-mdc/theme/material";
